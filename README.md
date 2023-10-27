@@ -1,2 +1,3 @@
 # neuro
-Neuro BUSINESS SCHOOL
+
+Open with browser [Link](https://turalinov.github.io/neuro/)
