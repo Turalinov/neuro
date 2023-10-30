@@ -310,20 +310,6 @@ template {
 @font-face {
   font-family: Epilogue;
   font-display: swap;
-  src: url("../fonts/Epilogue-Medium.woff2") format("woff2"), url("../fonts/Epilogue-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: Epilogue;
-  font-display: swap;
-  src: url("../fonts/Epilogue-Regular.woff2") format("woff2"), url("../fonts/Epilogue-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: Epilogue;
-  font-display: swap;
   src: url("../fonts/Epilogue-Bold.woff2") format("woff2"), url("../fonts/Epilogue-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
@@ -335,8 +321,59 @@ template {
   font-weight: 600;
   font-style: normal;
 }
+@font-face {
+  font-family: Epilogue;
+  font-display: swap;
+  src: url("../fonts/Epilogue-Medium.woff2") format("woff2"), url("../fonts/Epilogue-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Gilroy;
+  font-display: swap;
+  src: url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Epilogue;
+  font-display: swap;
+  src: url("../fonts/Epilogue-Regular.woff2") format("woff2"), url("../fonts/Epilogue-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Gilroy;
+  font-display: swap;
+  src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Gilroy;
+  font-display: swap;
+  src: url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Gilroy;
+  font-display: swap;
+  src: url("../fonts/Gilroy-Semibold.woff2") format("woff2"), url("../fonts/Gilroy-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: Gilroy;
+  font-display: swap;
+  src: url("../fonts/Gilroy-Thin.woff2") format("woff2"), url("../fonts/Gilroy-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
 :root {
   box-sizing: border-box;
+  --clr-black: #312B6D;
+  --clr-white: #ffffff;
 }
 
 *,
@@ -360,9 +397,15 @@ html {
 
 body {
   overflow-x: hidden;
+  color: var(--clr-black);
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.5;
+  background-color: var(--clr-white);
 }
 body.lock {
   overflow: hidden;
@@ -399,7 +442,21 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
+  font-family: "Epiloque", sans-serif;
+  font-weight: 700;
+  color: var(--clr-black);
+  line-height: normal;
+}
+
+h1 {
+  font-size: 95px;
   text-transform: uppercase;
+  color: var(--clr-white);
+}
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 66px;
+  }
 }
 
 button {
@@ -446,10 +503,137 @@ button {
   }
 }
 
-.partner {
-  color: blue;
+.btn {
+  font-family: "Epiloque", sans-serif;
+  font-weight: 600;
+  padding: 22px 40px 22px 24px;
+  border: 1px solid var(--clr-white);
+  font-size: 16px;
+  color: var(--clr-white);
+  border-radius: 34px;
 }
 
-.btn {
-  border: 1px solid red;
+a.btn {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn--icon {
+  position: relative;
+}
+.btn--icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  background-image: url("/img/arrow-white-to-left.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 4px;
+  height: 6px;
+  background-size: cover;
+}
+
+.hero {
+  background-image: url("/img/hero.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 205px 0 218px;
+}
+
+.hero .container {
+  display: flex;
+}
+
+.hero__left {
+  margin-left: 188px;
+}
+
+.hero__title {
+  margin-bottom: 89px;
+  max-width: 496px;
+}
+
+.hero__right {
+  margin-left: 107px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 802px;
+}
+
+.hero__graduates {
+  border-radius: 33px;
+  border: 1px solid var(--clr-white);
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: 0px 4px 66px 0px rgba(56, 24, 82, 0.1);
+  backdrop-filter: blur(20px);
+  padding: 17px 18px 24px 21px;
+  max-width: 172px;
+  color: var(--clr-white);
+  margin-bottom: 8px;
+}
+
+.hero__graduataes-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 27px;
+}
+
+.hero__graduataes-top > span {
+  font-weight: 100;
+  font-size: 35px;
+}
+
+.hero__graduataes-icons {
+  display: flex;
+  align-items: center;
+}
+
+.hero__graduataes-icon {
+  width: 29px;
+  height: 29px;
+  border: 1px solid var(--clr-white);
+  border-radius: 50%;
+}
+
+.hero__graduataes-icon + .hero__graduataes-icon {
+  margin-left: -5px;
+}
+
+.hero__graduates-icon-elem {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero__graduates-text {
+  display: block;
+  font-size: 14px;
+  line-height: normal;
+  margin-bottom: 16px;
+}
+
+.hero__graduates-subtext {
+  display: block;
+  font-size: 12px;
+}
+
+.hero__rating {
+  border-radius: 47px;
+  border: 1px solid var(--clr-white);
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: 0px 4px 66px 0px rgba(56, 24, 82, 0.1);
+  backdrop-filter: blur(20px);
+  color: var(--clr-white);
+  font-size: 21px;
+  padding: 145px 43px 38px 34px;
+  max-width: 260px;
+  background-image: url("/img/rating.svg");
+  background-repeat: no-repeat;
+  background-size: 95px 19px;
+  background-position: 35px 30px;
+  align-self: flex-end;
 }
