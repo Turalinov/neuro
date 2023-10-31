@@ -308,38 +308,10 @@ template {
 }
 
 @font-face {
-  font-family: Epilogue;
-  font-display: swap;
-  src: url("../fonts/Epilogue-Bold.woff2") format("woff2"), url("../fonts/Epilogue-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: Epilogue;
-  font-display: swap;
-  src: url("../fonts/Epilogue-SemiBold.woff2") format("woff2"), url("../fonts/Epilogue-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: Epilogue;
-  font-display: swap;
-  src: url("../fonts/Epilogue-Medium.woff2") format("woff2"), url("../fonts/Epilogue-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
   font-family: Gilroy;
   font-display: swap;
   src: url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff");
   font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: Epilogue;
-  font-display: swap;
-  src: url("../fonts/Epilogue-Regular.woff2") format("woff2"), url("../fonts/Epilogue-Regular.woff") format("woff");
-  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -404,7 +376,7 @@ body {
   font-family: "Gilroy", sans-serif;
   font-weight: 400;
   font-size: 22px;
-  line-height: 1.5;
+  line-height: normal;
   background-color: var(--clr-white);
 }
 body.lock {
@@ -445,13 +417,14 @@ h6 {
   font-family: "Epiloque", sans-serif;
   font-weight: 700;
   color: var(--clr-black);
-  line-height: normal;
+  line-height: 1;
 }
 
 h1 {
   font-size: 95px;
   text-transform: uppercase;
   color: var(--clr-white);
+  letter-spacing: -3px;
 }
 @media screen and (max-width: 768px) {
   h1 {
@@ -484,7 +457,7 @@ button {
   border: 1px solid red;
   z-index: 1;
 }
-@media screen and (max-width: 1920px) {
+@media screen and (max-width: 1820px) {
   .container {
     margin: 0px 50px;
     border: 1px solid blue;
@@ -511,6 +484,7 @@ button {
   font-size: 16px;
   color: var(--clr-white);
   border-radius: 34px;
+  line-height: 1;
 }
 
 a.btn {
@@ -524,7 +498,7 @@ a.btn {
 .btn--icon::after {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 52%;
   right: 25px;
   transform: translateY(-50%);
   background-image: url("/img/arrow-white-to-left.svg");
@@ -536,104 +510,222 @@ a.btn {
 }
 
 .hero {
-  background-image: url("/img/hero.png");
+  background-image: url("/img/hero-bg@desktop.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 205px 0 218px;
 }
+@media screen and (max-width: 768px) {
+  .hero {
+    background-image: url("/img/hero-bg@mobile.png");
+    padding: 123px 0px 55px;
+    min-height: 767px;
+  }
+}
 
 .hero .container {
   display: flex;
+}
+@media screen and (max-width: 768px) {
+  .hero .container {
+    flex-direction: column;
+  }
 }
 
 .hero__left {
   margin-left: 188px;
 }
+@media screen and (max-width: 1500px) {
+  .hero__left {
+    margin-left: 100px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .hero__left {
+    margin-left: 50px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .hero__left {
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero__left {
+    margin-bottom: 62px;
+  }
+}
 
 .hero__title {
-  margin-bottom: 89px;
+  margin-bottom: 67px;
   max-width: 496px;
+}
+@media screen and (max-width: 768px) {
+  .hero__title {
+    margin-bottom: 34px;
+  }
+}
+
+.hero__btn {
+  max-width: 320px;
+  width: 100%;
 }
 
 .hero__right {
-  margin-left: 107px;
+  margin-left: 143px;
   display: flex;
   flex-direction: column;
-  flex-basis: 802px;
+  flex-basis: 772px;
+}
+@media screen and (max-width: 1200px) {
+  .hero__right {
+    margin-left: 56px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero__right {
+    margin-left: 0;
+    flex-direction: column-reverse;
+    flex-basis: initial;
+  }
 }
 
 .hero__graduates {
   border-radius: 33px;
-  border: 1px solid var(--clr-white);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   background: rgba(255, 255, 255, 0.18);
   box-shadow: 0px 4px 66px 0px rgba(56, 24, 82, 0.1);
   backdrop-filter: blur(20px);
-  padding: 17px 18px 24px 21px;
+  padding: 17px 18px 21px 21px;
   max-width: 172px;
   color: var(--clr-white);
   margin-bottom: 8px;
+}
+@media screen and (max-width: 768px) {
+  .hero__graduates {
+    position: relative;
+    border-radius: 18px;
+    padding: 16px 12px 14px 20px;
+    max-width: 140px;
+  }
 }
 
 .hero__graduataes-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 27px;
+  margin-bottom: 23px;
+}
+@media screen and (max-width: 768px) {
+  .hero__graduataes-top {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .hero__graduataes-top > span {
   font-weight: 100;
   font-size: 35px;
+  line-height: 0;
+}
+@media screen and (max-width: 768px) {
+  .hero__graduataes-top > span {
+    display: none;
+  }
 }
 
 .hero__graduataes-icons {
   display: flex;
   align-items: center;
 }
-
 .hero__graduataes-icon {
   width: 29px;
   height: 29px;
   border: 1px solid var(--clr-white);
   border-radius: 50%;
 }
-
 .hero__graduataes-icon + .hero__graduataes-icon {
   margin-left: -5px;
 }
-
 .hero__graduates-icon-elem {
   width: 100%;
   object-fit: cover;
   object-position: center;
 }
-
 .hero__graduates-text {
   display: block;
   font-size: 14px;
   line-height: normal;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+  .hero__graduates-text {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+}
+
+.hero__graduates-text-add {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .hero__graduates-text-add {
+    display: inline-block;
+  }
 }
 
 .hero__graduates-subtext {
   display: block;
   font-size: 12px;
 }
+@media screen and (max-width: 768px) {
+  .hero__graduates-subtext {
+    display: none;
+  }
+}
 
 .hero__rating {
   border-radius: 47px;
-  border: 1px solid var(--clr-white);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   background: rgba(255, 255, 255, 0.18);
   box-shadow: 0px 4px 66px 0px rgba(56, 24, 82, 0.1);
   backdrop-filter: blur(20px);
   color: var(--clr-white);
-  font-size: 21px;
-  padding: 145px 43px 38px 34px;
+  padding: 30px 43px 33px 34px;
   max-width: 260px;
-  background-image: url("/img/rating.svg");
-  background-repeat: no-repeat;
-  background-size: 95px 19px;
-  background-position: 35px 30px;
   align-self: flex-end;
+}
+@media screen and (max-width: 768px) {
+  .hero__rating {
+    border-radius: 18px;
+    padding: 16px 20px 14px 20px;
+    max-width: 141px;
+    margin-bottom: 113px;
+  }
+}
+
+.hero__rating span {
+  display: block;
+  font-size: 21px;
+  text-shadow: 0px 1px 2px #AC6ED1;
+}
+@media screen and (max-width: 768px) {
+  .hero__rating span {
+    font-size: 12px;
+  }
+}
+
+.hero__rating-img {
+  object-fit: cover;
+  width: 95px;
+  height: 19px;
+  margin-bottom: 92px;
+}
+@media screen and (max-width: 768px) {
+  .hero__rating-img {
+    display: none;
+  }
 }
