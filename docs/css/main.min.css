@@ -931,6 +931,11 @@ a.btn {
     margin-bottom: 34px;
   }
 }
+@media screen and (max-width: 355px) {
+  .hero__title {
+    font-size: 59px;
+  }
+}
 
 .hero__btn {
   max-width: 320px;
@@ -1324,6 +1329,12 @@ a.btn {
     height: 43px;
   }
 }
+@media screen and (max-width: 355px) {
+  .logo {
+    width: 136px;
+    height: 43px;
+  }
+}
 
 .logo__img {
   width: 100%;
@@ -1437,6 +1448,7 @@ a.btn {
   .menu > ul > li > .sub-menu {
     border-radius: 27px;
     width: 100%;
+    text-wrap: initial;
   }
 }
 
