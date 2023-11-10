@@ -553,7 +553,7 @@ a.btn {
   top: 52%;
   right: 25px;
   transform: translateY(-50%);
-  background-image: url("/img/arrow-white-to-left.svg");
+  background-image: url("../img/arrow-white-to-left.svg");
   background-position: center;
   background-repeat: no-repeat;
   width: 4px;
@@ -584,7 +584,7 @@ a.btn {
   visibility: hidden;
   opacity: 0;
   transition: all 0.5s ease-in-out;
-  background-image: url("/img/header-after-bg.svg");
+  background-image: url("../img/header-after-bg.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -690,7 +690,7 @@ a.btn {
   transform: translateY(-50%);
   width: 4px;
   height: 7px;
-  background-image: url(../img/arrow-left-pink.svg);
+  background-image: url("../img/arrow-left-pink.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -777,7 +777,7 @@ a.btn {
 }
 
 .accreditation {
-  background-image: url("/img/accreditation-bg@desktop.png");
+  background-image: url("../img/accreditation-bg@desktop.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -785,7 +785,7 @@ a.btn {
 }
 @media screen and (max-width: 768px) {
   .accreditation {
-    background-image: url("/img/accreditation-bg@mobile.png");
+    background-image: url("../img/accreditation-bg@mobile.png");
     padding: 55px 0px 65px;
   }
 }
@@ -874,7 +874,7 @@ a.btn {
 }
 
 .hero {
-  background-image: url("/img/hero-bg@desktop.png");
+  background-image: url("../img/hero-bg@desktop.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -882,7 +882,7 @@ a.btn {
 }
 @media screen and (max-width: 768px) {
   .hero {
-    background-image: url("/img/hero-bg@mobile.png");
+    background-image: url("../img/hero-bg@mobile.png");
     padding: 123px 0px 55px;
     min-height: 767px;
     background-size: cover;
@@ -1238,7 +1238,7 @@ a.btn {
 }
 
 .who__card-right-inner {
-  background-image: url("/img/who-card-right1.svg");
+  background-image: url("../img/who-card-right1.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 530.21px 455px;
@@ -1366,7 +1366,7 @@ a.btn {
   transform: translateY(-50%);
   width: 6px;
   height: 6px;
-  background-image: url(../img/switcher.svg);
+  background-image: url("../img/switcher.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
