@@ -1428,12 +1428,12 @@ a.btn {
   text-wrap: nowrap;
   position: absolute;
   top: 36px;
-  transition: all 0.5s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
   box-sizing: content-box;
   will-change: max-height;
   font-size: 16px;
   color: var(--clr-black);
-  padding: 40px;
+  max-height: 0;
   border-radius: 47px;
   border: 1px solid var(--clr-white);
   background: rgba(255, 255, 255, 0.18);
@@ -1446,9 +1446,14 @@ a.btn {
 }
 @media screen and (max-width: 992px) {
   .menu > ul > li > .sub-menu {
-    border-radius: 27px;
+    position: static;
+    border-radius: initial;
     width: 100%;
     text-wrap: initial;
+    background: none;
+    border: none;
+    box-shadow: initial;
+    backdrop-filter: initial;
   }
 }
 
