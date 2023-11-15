@@ -876,6 +876,226 @@ a.btn {
   }
 }
 
+.explore {
+  padding: 86px 0 114px;
+}
+@media screen and (max-width: 768px) {
+  .explore {
+    padding: 35px 0;
+  }
+}
+.explore .grid {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 33% 24% 41%;
+  grid-template-rows: auto;
+  grid-template-areas: "first third fourth" "second third fourth";
+  gap: 20px;
+}
+@media screen and (max-width: 768px) {
+  .explore .grid {
+    grid-template-columns: 100%;
+    grid-template-areas: "first" "second" "third" "fourth";
+    gap: 10px;
+  }
+}
+.explore .grid__child {
+  border-radius: 18px;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .explore .grid__child {
+    border-radius: 10px;
+  }
+}
+.explore .grid__child img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.explore .grid__child-1 {
+  grid-area: first;
+}
+.explore .grid__child-2 {
+  grid-area: second;
+}
+.explore .grid__child-3 {
+  grid-area: third;
+}
+.explore .grid__child-4 {
+  grid-area: fourth;
+}
+
+.explore__title {
+  margin-bottom: 54px;
+}
+@media screen and (max-width: 768px) {
+  .explore__title {
+    margin-bottom: 40px;
+  }
+}
+
+.explore__desc {
+  max-width: 678px;
+  margin-bottom: 68px;
+}
+@media screen and (max-width: 768px) {
+  .explore__desc {
+    margin-bottom: 40px;
+  }
+}
+
+.explore__tabs {
+  position: relative;
+  overflow: auto;
+  display: flex;
+}
+.explore__tabs::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--clr-blue-light);
+  bottom: 1px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  .explore__tabs::after {
+    display: none;
+  }
+}
+
+.explore__tab:nth-child(1) {
+  z-index: 7;
+}
+
+.explore__tab:nth-child(2) {
+  z-index: 6;
+}
+
+.explore__tab:nth-child(3) {
+  z-index: 5;
+}
+
+.explore__tab:nth-child(4) {
+  z-index: 4;
+}
+
+.explore__tab:nth-child(5) {
+  z-index: 3;
+}
+
+.explore__tab:nth-child(6) {
+  z-index: 2;
+}
+
+.explore__tab:nth-child(7) {
+  z-index: 1;
+}
+
+.explore__tab.active {
+  z-index: 8;
+}
+
+.explore__tab + .explore__tab {
+  margin-left: -15px;
+}
+@media screen and (max-width: 768px) {
+  .explore__tab + .explore__tab {
+    margin-left: -8px;
+  }
+}
+
+.explore__tab {
+  color: var(--clr-blue);
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 20px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  height: 64px;
+  background-image: url("../img/explore__tab.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media screen and (max-width: 768px) {
+  .explore__tab {
+    width: 130px;
+    height: 41px;
+    font-size: 17px;
+  }
+}
+
+.explore__tab.active {
+  background-image: url("../img/explore__tab-active.svg");
+  position: relative;
+}
+.explore__tab.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff;
+  bottom: 1px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  .explore__tab.active::after {
+    bottom: 2px;
+  }
+}
+
+.explore__list {
+  margin-top: 20px;
+}
+.explore__item {
+  position: relative;
+  display: none;
+}
+.explore__item.active {
+  display: block;
+}
+.explore__gallery-scrollbar {
+  position: absolute;
+  bottom: -34px;
+  width: 100%;
+  height: 14px;
+  background-color: var(--clr-white-dark);
+  border-radius: 7px;
+}
+@media screen and (max-width: 768px) {
+  .explore__gallery-scrollbar {
+    display: none;
+  }
+}
+
+.explore__gallery-scrollbar > .swiper-scrollbar-drag {
+  cursor: grab;
+  background-color: var(--clr-blue-light);
+  position: relative;
+}
+.explore__gallery-scrollbar > .swiper-scrollbar-drag::after {
+  content: "";
+  position: absolute;
+  width: 46px;
+  height: 27px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/programs__direction-scrollbar.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 .hero {
   background-image: url("../img/hero-bg@desktop.png");
   background-position: center;
