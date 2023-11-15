@@ -1244,6 +1244,52 @@ a.btn {
   font-weight: 600;
   z-index: 2;
 }
+.partners {
+  padding: 95px 0 85px;
+}
+@media screen and (max-width: 768px) {
+  .partners {
+    padding: 35px 0 35px;
+  }
+}
+
+.partners__title {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 94px;
+}
+@media screen and (max-width: 768px) {
+  .partners__title {
+    text-align: left;
+    margin-bottom: 40px;
+  }
+}
+
+.partners__slider.swiper {
+  overflow: initial;
+}
+@media screen and (max-width: 768px) {
+  .partners__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -8px;
+    margin-top: -8px;
+  }
+}
+
+.partners__item {
+  width: 205px;
+  height: 133px;
+}
+@media screen and (max-width: 768px) {
+  .partners__item {
+    margin-left: 8px;
+    margin-top: 8px;
+    width: calc(50% - 8px);
+    height: initial;
+  }
+}
+
 .programs {
   padding: 60px 0 85px;
 }
