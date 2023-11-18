@@ -568,6 +568,11 @@ a.btn {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), #060043;
   padding: 77px 0 131px;
 }
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 40px 0;
+  }
+}
 
 .footer__wrap {
   display: flex;
@@ -591,6 +596,12 @@ a.btn {
     align-items: center;
   }
 }
+@media screen and (max-width: 768px) {
+  .footer__elem:nth-child(2) {
+    margin-left: 68px;
+    align-self: flex-start;
+  }
+}
 
 .footer__logo.logo {
   width: 280px;
@@ -603,6 +614,13 @@ a.btn {
     height: 53px;
   }
 }
+@media screen and (max-width: 768px) {
+  .footer__logo.logo {
+    width: 222px;
+    height: 57px;
+    margin-bottom: 39px;
+  }
+}
 
 .footer__contacts {
   max-width: 190px;
@@ -610,6 +628,12 @@ a.btn {
 @media screen and (max-width: 1326px) {
   .footer__contacts {
     margin-bottom: 76px;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__contacts {
+    max-width: 188px;
   }
 }
 
@@ -626,6 +650,12 @@ a.btn {
   font-weight: 500;
   padding-left: 28px;
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  .footer__contacts-map,
+  .footer__contacts-email {
+    padding-left: 26px;
+  }
 }
 .footer__contacts-map::after,
 .footer__contacts-email::after {
@@ -657,10 +687,25 @@ a.btn {
 .footer__menus {
   display: flex;
 }
-
 @media screen and (max-width: 1326px) {
-  .footer__menu {
+  .footer__menus {
     margin-bottom: 44px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__menus {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer__menu {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__menu:nth-child(3) .footer__label {
+    margin-bottom: 0;
   }
 }
 
@@ -672,15 +717,69 @@ a.btn {
     margin-left: 50px;
   }
 }
+@media screen and (max-width: 768px) {
+  .footer__menu + .footer__menu {
+    margin-left: 0;
+  }
+}
 
-.footer__label {
+@media screen and (max-width: 768px) {
+  .footer__label {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.footer__label-text {
   font-size: 32px;
   text-decoration: none;
   text-transform: uppercase;
   margin-bottom: 35px;
 }
-.footer__label span {
+@media screen and (max-width: 768px) {
+  .footer__label-text {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+}
+.footer__label-text span {
   color: var(--clr-pink);
+}
+
+@media screen and (max-width: 768px) {
+  .footer__label-btn {
+    margin-left: 10px;
+    width: 13px;
+    height: 35px;
+    background-image: url("../img/arrow-down.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: 0.8s;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer__menu.active .footer__label-btn {
+    transform: rotate(180deg);
+  }
+  .footer__menu.active .footer__label ~ ul {
+    visibility: visible;
+    opacity: 1;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer__menu .footer__label ~ ul {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    box-sizing: content-box;
+    will-change: max-height;
+    max-height: 0;
+    margin-bottom: 0;
+  }
 }
 
 .footer__menu ul li a {
@@ -721,7 +820,7 @@ a.btn {
   position: absolute;
   right: 0;
   width: 54px;
-  height: 54px;
+  height: 100%;
   font-size: 0;
   background-image: url("../img/programs__direction-link.svg");
   background-position: center;
@@ -735,13 +834,16 @@ a.btn {
   .footer__subscription-form-btn {
     background-size: 16px 16px;
     border-radius: 10px 0px;
-    width: 45px;
-    height: 45px;
   }
 }
 
 .footer__socials {
   margin-bottom: 70px;
+}
+@media screen and (max-width: 768px) {
+  .footer__socials {
+    margin-bottom: 25px;
+  }
 }
 
 .footer__copy {
@@ -3269,6 +3371,11 @@ a.btn {
 .socials__item + .socials__item {
   margin-left: -3px;
 }
+@media screen and (max-width: 768px) {
+  .socials__item + .socials__item {
+    margin-left: -6px;
+  }
+}
 
 .socials__link {
   display: block;
@@ -3276,10 +3383,22 @@ a.btn {
   height: 35px;
   transition: 0.3s;
 }
+@media screen and (max-width: 768px) {
+  .socials__link {
+    width: 60px;
+    height: 60px;
+  }
+}
 
 .socials__icon {
   width: 35px;
   height: 35px;
+}
+@media screen and (max-width: 768px) {
+  .socials__icon {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .swiper-button-prev,
