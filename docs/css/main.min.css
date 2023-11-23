@@ -497,25 +497,21 @@ button {
   margin: 0 auto;
   height: 100%;
   max-width: 1720px;
-  border: 1px solid red;
   z-index: 1;
 }
 @media screen and (max-width: 1820px) {
   .container {
     margin: 0px 50px;
-    border: 1px solid blue;
   }
 }
 @media screen and (max-width: 992px) {
   .container {
     margin: 0px 30px;
-    border: 1px solid green;
   }
 }
 @media screen and (max-width: 768px) {
   .container {
     margin: 0px 20px;
-    border: 1px solid orange;
   }
 }
 
