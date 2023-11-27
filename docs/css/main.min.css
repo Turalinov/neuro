@@ -8465,10 +8465,6 @@ a.btn {
   opacity: 0;
   visibility: hidden;
 }
-.application__link:hover div {
-  opacity: 1;
-  visibility: visible;
-}
 .application__link::before, .application__link::after {
   border-radius: 34px;
   transition: all 0.5s;
@@ -8503,9 +8499,6 @@ a.btn {
   opacity: 1;
   visibility: visible;
 }
-.application__link:hover span {
-  color: var(--clr-pink);
-}
 .application__link:hover span::after {
   opacity: 0;
   visibility: hidden;
@@ -8523,7 +8516,7 @@ a.btn {
   transform: translateY(-50%);
   width: 7px;
   height: 13px;
-  background-image: url("../img/arrow-left-white.svg");
+  background-image: url("../img/application__link-arrow.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -8535,9 +8528,9 @@ a.btn {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  width: 7px;
-  height: 13px;
-  background-image: url("../img/arrow-left-pink.svg");
+  width: 13px;
+  height: 8px;
+  background-image: url("../img/application__link-arrow.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
