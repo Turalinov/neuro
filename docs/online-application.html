@@ -259,7 +259,7 @@
       <div class="application__steps-wrap">
         <div class="application__steps">
           <!-- 1 -->
-          <div class="application__step active">
+          <div class="application__step ">
             <div class="application__dot">
               <span>1</span>
             </div>
@@ -267,7 +267,7 @@
           </div>
           <div class="application__arrow"></div>
           <!-- 2 -->
-          <div class="application__step">
+          <div class="application__step active">
             <div class="application__dot">
               <span>2</span>
             </div>
@@ -350,7 +350,8 @@
                     <div class="application__label-text">
                       Date of Birth <span>*</span>
                     </div>
-                    <input type="text" class="application-input" name="date_of_birth" placeholder="__.__.__">
+                    <!-- placeholder="__.__.__" -->
+                    <input type="text" class="application-input js-date" name="date_of_birth">
                   </label>
                 </div>
               </div>
@@ -441,11 +442,47 @@
                 </div>
                 <!-- col 2  -->
                 <div class="application__block">
+
+
+
+
                   <label class="application__label">
                     <div class="application__label-text">
                       Telephone <span>*</span>
                     </div>
-                    <input type="text" class="application-input" name="telephone" placeholder="+34 (___) ___-____">
+
+                    <div class="custom-phone-select">
+
+                      <div class="custom_phone-select-wrap-parent">
+                        <!-- обертка для выбранной страны и иконки  -->
+                        <div class="custom_phone-select-wrap">
+                          <!-- выбранная страна  -->
+                          <div class="custom_phone-select-value">
+                            ES
+                          </div>
+                          <!-- иконка -->
+                          <div class="custom_phone-select-icon"></div>
+
+
+                        </div>
+                        <div class="custom_phone-select-list-wrap">
+                          <div class="custom_phone-select-list">
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- placeholder="+34 (___) ___-____" -->
+                      <input type="text" class="application-input js-phone" name="telephone">
+
+
+                    </div>
+
+
+
+
+
+
+
                   </label>
                 </div>
               </div>
@@ -502,6 +539,605 @@
 
         </div>
         <!-- часть формы 1 end  -->
+
+        <!-- часть формы 2 -->
+        <div class="application__content active">
+          <!-- белая часть -->
+          <div class="application__content-inner">
+            <!-- application__section -->
+            <div class="application__section">
+              <!-- row 1-->
+              <div class="application__row">
+                <!-- col 1  -->
+                <div class="application__block application__block--full">
+                  <div class="application__custom-radio-label">Programs <span>*</span></div>
+
+
+                  <div class="application__custom-radio-wrap">
+
+                    <label class="application__custom-radio">
+                      <input type="radio" name="programs" value="bachelors">
+                      <span>Bachelors</span>
+                    </label>
+                    <label class="application__custom-radio">
+                      <input type="radio" name="programs" value="masters">
+                      <span>Masters</span>
+                    </label>
+                    <label class="application__custom-radio">
+                      <input type="radio" name="programs" value="mba">
+                      <span>MBA</span>
+                    </label>
+                    <label class="application__custom-radio">
+                      <input type="radio" name="programs" value="phd">
+                      <span>PHD</span>
+                    </label>
+                    <label class="application__custom-radio">
+                      <input type="radio" name="programs" value="summer_camp">
+                      <span>Summer Camp</span>
+                    </label>
+                  </div>
+
+                </div>
+                <!-- col 1 end  -->
+              </div>
+              <!-- row end  -->
+              <!-- row 2-->
+              <div class="application__row">
+                <!-- col 1  -->
+                <div class="application__block application__block--full">
+                  <div class="application__custom-radio-label">Modality <span>*</span></div>
+
+
+                  <div class="application__custom-radio-wrap">
+
+                    <label class="application__custom-radio">
+                      <input type="radio" name="modality" value="on_campus">
+                      <span>On campus</span>
+                    </label>
+                    <label class="application__custom-radio">
+                      <input type="radio" name="modality" value="online">
+                      <span>Online</span>
+                    </label><label class="application__custom-radio">
+                      <input type="radio" name="modality" value="hybrid">
+                      <span>Hybrid</span>
+                    </label>
+                    <label class="application__custom-radio">
+                      <input type="radio" name="modality" value="summer_camp">
+                      <span>Summer Camp</span>
+                    </label>
+                  </div>
+
+                </div>
+                <!-- col 1 end  -->
+              </div>
+              <!-- row end  -->
+              <!-- row 3-->
+              <div class="application__row">
+                <!-- col 1  -->
+                <div class="application__block application__block--full">
+                  <div class="application__custom-radio-label">Language <span>*</span></div>
+
+
+                  <div class="application__custom-radio-wrap">
+
+                    <label class="application__custom-radio">
+                      <input type="radio" name="language" value="esponal">
+                      <span>Espanol</span>
+                    </label>
+                    <label class="application__custom-radio">
+                      <input type="radio" name="language" value="online">
+                      <span>English</span>
+                    </label>
+                  </div>
+
+                </div>
+                <!-- col 1 end  -->
+              </div>
+              <!-- row end  -->
+              <!-- row 4-->
+              <div class="application__row">
+                <!-- col 1  -->
+                <div class="application__block application__block--full">
+                  <div class="application__custom-radio-label">Intake <span>*</span></div>
+
+
+                  <div class="application__custom-radio-wrap">
+
+                    <label class="application__custom-radio">
+                      <input type="radio" name="intake" value="October_2023">
+                      <span>October 2023</span>
+                    </label>
+                    <label class="application__custom-radio">
+                      <input type="radio" name="intake" value="January_2024">
+                      <span>January 2024</span>
+                    </label>
+                    <label class="application__custom-radio">
+                      <input type="radio" name="intake" value="March_2024">
+                      <span>March 2024</span>
+                    </label>
+                    <label class="application__custom-radio">
+                      <input type="radio" name="intake" value="Summer_Camp_24.07.23">
+                      <span>Summer Camp 24.07.23</span>
+                    </label>
+                    <label class="application__custom-radio">
+                      <input type="radio" name="intake" value="Summer_Camp_07.08.23">
+                      <span>Summer Camp 07.08.23</span>
+                    </label>
+                    <label class="application__custom-radio">
+                      <input type="radio" name="intake" value="Summer_Camp_21.08.23">
+                      <span>Summer Camp 21.08.23</span>
+                    </label>
+                  </div>
+
+                </div>
+                <!-- col 1 end  -->
+              </div>
+              <!-- row end  -->
+            </div>
+            <!-- application__section end -->
+          </div>
+          <!-- белая часть end  -->
+
+
+          <!-- кнопки  -->
+          <div class="application__content-btns">
+            <!-- левая сторона  -->
+            <div class="application__content-btns-left">
+              <a href="#" class="application__link-prev">
+                <span>Previous step</span>
+              </a>
+            </div>
+
+            <!-- правая сторона  -->
+            <div class="application__content-btns-right">
+              <a href="#" class="application__link">
+                <div>
+                </div>
+                <span>Next Step</span>
+              </a>
+            </div>
+
+          </div>
+
+
+
+
+
+
+        </div>
+        <!-- часть формы 2 end  -->
+
+
+
+
+        <!-- часть формы 3 -->
+        <div class="application__content active">
+          <!-- белая часть  -->
+          <div class="application__content-inner">
+            <!-- application__section -->
+            <div class="application__section">
+              <!-- row 1 -->
+              <div class="application__row">
+
+                <!-- col 1 -->
+                <div class="application__block">
+
+                  <!-- блок с загрузкой файла  -->
+                  <div class="application__file">
+                    <!-- label  -->
+                    <div class="application__file-label">
+                      DNI o Passport <span>*</span>
+                    </div>
+
+                    <!-- upload  -->
+                    <div class="application__file-input-wrap">
+                      <input type="file" name="passport" id="file-passport" class="application__file-input">
+                      <label class="application__file-input-label" for="file-passport">Upload Document</label>
+                    </div>
+
+                    <!-- progress  -->
+                    <div class="application__file-progress completed">
+
+                      <div class="application__file-progress-content">
+
+                        <!-- верхняя часть  -->
+                        <div class="application__file-progress-content-top">
+
+                          <!-- название файла  -->
+                          <div class="application__file-progress-name">
+                            jDW4kDdekU4C+8=
+                          </div>
+                          <!-- проценты  -->
+                          <div class="application__file-progress-percent">
+                            <span>100</span>%
+                          </div>
+
+                        </div>
+
+                        <!-- нижняя часть  -->
+                        <div class="application__file-progress-bottom">
+                          <!-- прогрессбар  -->
+                          <div class="application__file-progress-indicator">
+                            <div style="width: 100%;"></div>
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+                    <!-- progress end  -->
+
+
+                  </div>
+
+                </div>
+
+                <!-- col 2  -->
+                <div class="application__block">
+
+                  <!-- блок с загрузкой файла  -->
+                  <div class="application__file">
+                    <!-- label  -->
+                    <div class="application__file-label">
+                      CV <span>*</span>
+                    </div>
+
+
+                    <!-- upload  -->
+                    <div class="application__file-input-wrap">
+                      <input type="file" name="cv" id="file-cv" class="application__file-input">
+                      <label class="application__file-input-label" for="file-cv">Upload Document</label>
+                    </div>
+
+                    <!-- text  -->
+                    <div class="application__file-text">
+                      En ingles o espanol
+                    </div>
+
+
+                    <!-- progress  -->
+                    <div class="application__file-progress completed">
+
+                      <div class="application__file-progress-content">
+
+                        <!-- верхняя часть  -->
+                        <div class="application__file-progress-content-top">
+
+                          <!-- название файла  -->
+                          <div class="application__file-progress-name">
+                            jDW4kDdekU4C+8=
+                          </div>
+                          <!-- проценты  -->
+                          <div class="application__file-progress-percent">
+                            <span>100</span>%
+                          </div>
+
+                        </div>
+
+                        <!-- нижняя часть  -->
+                        <div class="application__file-progress-bottom">
+                          <!-- прогрессбар  -->
+                          <div class="application__file-progress-indicator">
+                            <div style="width: 100%;"></div>
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+                    <!-- progress end  -->
+
+
+                  </div>
+
+                </div>
+
+              </div>
+              <!-- row 1 end  -->
+
+              <!-- row 2 -->
+              <div class="application__row">
+
+                <!-- col 1 -->
+                <div class="application__block">
+
+                  <!-- блок с загрузкой файла  -->
+                  <div class="application__file">
+                    <!-- label  -->
+                    <div class="application__file-label">
+                      Academic transcript of your professional career (Bachelor degree) <span>*</span>
+                    </div>
+
+                    <!-- upload  -->
+                    <div class="application__file-input-wrap">
+                      <input type="file" name="transcript" id="file-transcript" class="application__file-input">
+                      <label class="application__file-input-label" for="file-transcript">Upload Document</label>
+                    </div>
+
+                    <!-- progress  -->
+                    <div class="application__file-progress completed">
+
+                      <div class="application__file-progress-content">
+
+                        <!-- верхняя часть  -->
+                        <div class="application__file-progress-content-top">
+
+                          <!-- название файла  -->
+                          <div class="application__file-progress-name">
+                            jDW4kDdekU4C+8=
+                          </div>
+                          <!-- проценты  -->
+                          <div class="application__file-progress-percent">
+                            <span>100</span>%
+                          </div>
+
+                        </div>
+
+                        <!-- нижняя часть  -->
+                        <div class="application__file-progress-bottom">
+                          <!-- прогрессбар  -->
+                          <div class="application__file-progress-indicator">
+                            <div style="width: 100%;"></div>
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+                    <!-- progress end  -->
+
+
+                  </div>
+
+                </div>
+
+                <!-- col 2  -->
+                <div class="application__block">
+
+                  <!-- блок с загрузкой файла  -->
+                  <div class="application__file">
+                    <!-- label  -->
+                    <div class="application__file-label">
+                      Motivation letter <span>*</span>
+                    </div>
+
+
+                    <!-- upload  -->
+                    <div class="application__file-input-wrap">
+                      <input type="file" name="letter" id="file-letter" class="application__file-input">
+                      <label class="application__file-input-label" for="file-letter">Upload Document</label>
+                    </div>
+
+                    <!-- text  -->
+                    <div class="application__file-text">
+                      - 500 - 1000 words, format .pdf<br>
+                      - Explain why you want to take this program<br>
+                      - Argue why your profile fits
+                    </div>
+
+
+                    <!-- progress  -->
+                    <div class="application__file-progress">
+
+                      <div class="application__file-progress-content">
+
+                        <!-- верхняя часть  -->
+                        <div class="application__file-progress-content-top">
+
+                          <!-- название файла  -->
+                          <div class="application__file-progress-name">
+                            jDW4kDdekU4C+8=
+                          </div>
+                          <!-- проценты  -->
+                          <div class="application__file-progress-percent">
+                            <span>80</span>%
+                          </div>
+
+                        </div>
+
+                        <!-- нижняя часть  -->
+                        <div class="application__file-progress-bottom">
+                          <!-- прогрессбар  -->
+                          <div class="application__file-progress-indicator">
+                            <div style="width: 80%;"></div>
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+                    <!-- progress end  -->
+
+
+                  </div>
+
+                </div>
+
+              </div>
+              <!-- row 2 end  -->
+
+
+              <!-- row 3-->
+              <div class="application__row">
+                <!-- col 1  -->
+                <div class="application__block">
+
+                  <!-- блок с загрузкой файла  -->
+                  <div class="application__file">
+                    <label class="application__label">
+                      <div class="application__label-text">
+                        Comment
+                      </div>
+                      <input type="text" class="application-input" name="comment">
+                    </label>
+
+                    <!-- text  -->
+                    <div class="application__file-text application__file-text--bottom">
+                      If you have any comments to tell us, you can leave them here
+                    </div>
+
+                  </div>
+
+                </div>
+                <!-- col 1 end -->
+
+              </div>
+              <!-- row 3 end  -->
+
+            </div>
+          </div>
+          <!-- белая часть end -->
+
+          <!-- кнопки  -->
+          <div class="application__content-btns">
+            <!-- левая сторона  -->
+            <div class="application__content-btns-left">
+              <a href="#" class="application__link-prev">
+                <span>Previous step</span>
+              </a>
+            </div>
+
+            <!-- правая сторона  -->
+            <div class="application__content-btns-right">
+              <a href="#" class="application__link">
+                <div>
+                </div>
+                <span>Next Step</span>
+              </a>
+            </div>
+
+          </div>
+          <!-- кнопки end -->
+
+        </div>
+        <!-- часть формы 3 end  -->
+
+
+
+
+        <!-- часть формы 4 -->
+        <div class="application__content active">
+          <!-- белая часть  -->
+          <div class="application__content-inner">
+            <!-- application__section -->
+            <div class="application__section">
+
+              <!-- row 1-->
+              <div class="application__row">
+                <!-- col 1  -->
+                <div class="application__block">
+
+                  <!-- плашка с текстом  -->
+                  <div class="application__block-text">
+                    The application fee at Neuro Business School contributes to the administrative costs associated with
+                    processing
+                    applications, ensuring a comprehensive and efficient review process. This fee helps us maintain the
+                    high standards of
+                    education and resources available to our students, enabling us to continue offering a top-tier
+                    learning experience.
+                  </div>
+
+
+                </div>
+                <!-- col 1 end -->
+
+                <!-- col 2 -->
+                <div class="application__block">
+
+                  <!-- последнее потдверждение  -->
+                  <div class="application__check">
+                    <!-- верхняя  -->
+                    <div class="application__check-top">
+                      <!-- label  -->
+                      <div class="application__check-top-label">
+                        Registration fee <span>*</span>
+                      </div>
+
+                      <!-- price  -->
+                      <div class="application__check-top-price">
+                        Price: <span>30,00</span> €
+                      </div>
+
+                      <!-- custom checkbox  -->
+                      <label class="application__checkbox-wrap">
+                        <input type="checkbox" class="application__checkbox" name="agree" checked>
+
+                        <div class="application__checkbox-custom">
+                          <svg class="application__checkbox-custom-icon" viewBox="0 0 15 15">
+                            <use xlink:href="img/icons/sprite.svg#check"></use>
+                          </svg>
+                        </div>
+
+                        <div class="application__checkbox-politics">
+                          I have read and accept the <a href="#" target="_blank">privacy policy</a>
+                        </div>
+
+                      </label>
+
+                    </div>
+
+                    <!-- нижняя  -->
+                    <div class="application__check-bottom">
+                      <!-- label  -->
+                      <div class="application__check-bottom-label">
+                        Pay with card (Stripe)
+                      </div>
+
+
+                      <div class="application__check-stripe">
+
+                        <input class="application__check-stripe-input" type="text" name="stripe"
+                          placeholder="____ ____ ____ ____">
+
+                      </div>
+
+
+                    </div>
+
+                  </div>
+
+
+                </div>
+                <!-- col 2 end  -->
+
+
+              </div>
+              <!-- row 1 end  -->
+
+            </div>
+          </div>
+          <!-- белая часть end -->
+
+          <!-- кнопки  -->
+          <div class="application__content-btns">
+            <!-- левая сторона  -->
+            <div class="application__content-btns-left">
+              <a href="#" class="application__link-prev">
+                <span>Previous step</span>
+              </a>
+            </div>
+
+            <!-- правая сторона  -->
+            <div class="application__content-btns-right">
+              <a href="#" class="application__link">
+                <div>
+                </div>
+                <span>Apply</span>
+              </a>
+            </div>
+
+          </div>
+          <!-- кнопки end -->
+
+        </div>
+        <!-- часть формы 3 end  -->
+
+
+
 
 
       </form>
