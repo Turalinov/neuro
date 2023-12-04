@@ -2643,6 +2643,7 @@ a.btn {
   top: 25px;
   left: -5px;
   height: 100px;
+  width: 50px;
   border: 1px solid #D0D5DD;
   display: none;
 }
@@ -8634,6 +8635,20 @@ a.btn {
   background-size: contain;
   background-position: center;
   transition: all 0.5s;
+}
+
+.application__content-error {
+  font-size: 15px;
+  color: #ff2a2a;
+  opacity: 0;
+  visibility: hidden;
+}
+.application__content-error.active {
+  opacity: 1;
+  visibility: visible;
+}
+.application__content-error span {
+  font-weight: 500;
 }
 
 .application__content-btns {

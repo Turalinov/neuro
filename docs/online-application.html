@@ -259,7 +259,7 @@
       <div class="application__steps-wrap">
         <div class="application__steps">
           <!-- 1 -->
-          <div class="application__step ">
+          <div class="application__step active">
             <div class="application__dot">
               <span>1</span>
             </div>
@@ -267,7 +267,7 @@
           </div>
           <div class="application__arrow"></div>
           <!-- 2 -->
-          <div class="application__step active">
+          <div class="application__step ">
             <div class="application__dot">
               <span>2</span>
             </div>
@@ -309,7 +309,7 @@
                     <div class="application__label-text">
                       First Name <span>*</span>
                     </div>
-                    <input type="text" class="application-input" name="firstname">
+                    <input type="text" class="application-input js-required" name="firstname">
                   </label>
                 </div>
                 <!-- col 2  -->
@@ -318,7 +318,7 @@
                     <div class="application__label-text">
                       Last Name <span>*</span>
                     </div>
-                    <input type="text" class="application-input" name="lastname">
+                    <input type="text" class="application-input js-required" name="lastname">
                   </label>
                 </div>
               </div>
@@ -351,7 +351,7 @@
                       Date of Birth <span>*</span>
                     </div>
                     <!-- placeholder="__.__.__" -->
-                    <input type="text" class="application-input js-date" name="date_of_birth">
+                    <input type="text" class="application-input js-date js-required" name="date_of_birth">
                   </label>
                 </div>
               </div>
@@ -363,7 +363,7 @@
                     <div class="application__label-text">
                       State of origin <span>*</span>
                     </div>
-                    <input type="text" class="application-input" name="state_of_origin">
+                    <input type="text" class="application-input js-required" name="state_of_origin">
                   </label>
                 </div>
                 <!-- col 2  -->
@@ -372,7 +372,7 @@
                     <div class="application__label-text">
                       Nationality <span>*</span>
                     </div>
-                    <input type="text" class="application-input" name="nationality">
+                    <input type="text" class="application-input js-required" name="nationality">
                   </label>
                 </div>
               </div>
@@ -393,7 +393,7 @@
                     <div class="application__label-text">
                       Line 1 <span>*</span>
                     </div>
-                    <input type="text" class="application-input" name="line1">
+                    <input type="text" class="application-input js-required" name="line1">
                   </label>
                 </div>
                 <!-- col 2  -->
@@ -402,7 +402,7 @@
                     <div class="application__label-text">
                       Line 2 <span>*</span>
                     </div>
-                    <input type="text" class="application-input" name="line2">
+                    <input type="text" class="application-input js-required" name="line2">
                   </label>
                 </div>
               </div>
@@ -415,7 +415,7 @@
                     <div class="application__label-text">
                       Province <span>*</span>
                     </div>
-                    <input type="text" class="application-input" name="province">
+                    <input type="text" class="application-input js-required" name="province">
                   </label>
                 </div>
                 <!-- col 2  -->
@@ -424,7 +424,7 @@
                     <div class="application__label-text">
                       Country <span>*</span>
                     </div>
-                    <input type="text" class="application-input" name="country">
+                    <input type="text" class="application-input js-required" name="country">
                   </label>
                 </div>
               </div>
@@ -437,7 +437,7 @@
                     <div class="application__label-text">
                       Email <span>*</span>
                     </div>
-                    <input type="email" class="application-input" name="email">
+                    <input type="email" class="application-input js-required" name="email">
                   </label>
                 </div>
                 <!-- col 2  -->
@@ -472,7 +472,7 @@
                       </div>
 
                       <!-- placeholder="+34 (___) ___-____" -->
-                      <input type="text" class="application-input js-phone" name="telephone">
+                      <input type="text" class="application-input js-phone js-required" name="telephone">
 
 
                     </div>
@@ -495,7 +495,7 @@
                     <div class="application__label-text">
                       Where did you find us? <span>*</span>
                     </div>
-                    <input type="text" class="application-input" name="resource">
+                    <input type="text" class="application-input js-required" name="resource">
                   </label>
                 </div>
                 <!-- col 2  -->
@@ -526,8 +526,19 @@
 
             </div>
             <!-- application__section end -->
+
+            <!-- application__section -->
+            <div class="application__section">
+              <div class="application__content-error">
+                The <span></span> field is not filled in or filled in incorrectly
+              </div>
+            </div>
+            <!-- application__section end -->
+
           </div>
           <!-- белая часть -->
+
+
 
           <a href="#" class="application__link">
             <div>
@@ -535,13 +546,11 @@
             <span>Next Step</span>
           </a>
 
-
-
         </div>
         <!-- часть формы 1 end  -->
 
         <!-- часть формы 2 -->
-        <div class="application__content active">
+        <div class="application__content">
           <!-- белая часть -->
           <div class="application__content-inner">
             <!-- application__section -->
@@ -675,6 +684,16 @@
               <!-- row end  -->
             </div>
             <!-- application__section end -->
+
+            <!-- application__section -->
+            <div class="application__section">
+              <div class="application__content-error">
+                The <span></span> field is not filled in or filled in incorrectly
+              </div>
+            </div>
+            <!-- application__section end -->
+
+
           </div>
           <!-- белая часть end  -->
 
@@ -708,10 +727,8 @@
         <!-- часть формы 2 end  -->
 
 
-
-
         <!-- часть формы 3 -->
-        <div class="application__content active">
+        <div class="application__content">
           <!-- белая часть  -->
           <div class="application__content-inner">
             <!-- application__section -->
@@ -1017,10 +1034,8 @@
         <!-- часть формы 3 end  -->
 
 
-
-
         <!-- часть формы 4 -->
-        <div class="application__content active">
+        <div class="application__content">
           <!-- белая часть  -->
           <div class="application__content-inner">
             <!-- application__section -->
