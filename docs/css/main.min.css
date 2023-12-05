@@ -8709,7 +8709,8 @@ a.btn {
   width: 232px;
 }
 
-.application__file {
+.application__file,
+.application__file--comment {
   background-color: #FCFCFC;
   border-radius: 4px;
   padding: 20px;
@@ -8759,6 +8760,16 @@ a.btn {
   max-width: 155px;
 }
 
+.application__file-alert {
+  color: #ff2a2a;
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: none;
+}
+.application__file-alert.active {
+  display: block;
+}
+
 .application__file-progress {
   max-width: 304px;
   position: relative;
@@ -8780,6 +8791,13 @@ a.btn {
   background-size: contain;
 }
 
+.application__file-progress.laoded .application__file-progress-percent {
+  color: var(--clr-pink);
+}
+.application__file-progress.laoded .application__file-progress-indicator div {
+  background-color: var(--clr-pink);
+}
+
 .application__file-progress.completed .application__file-progress-percent {
   color: var(--clr-blue-light);
 }
@@ -8799,10 +8817,11 @@ a.btn {
 .application__file-progress-name {
   max-width: 155px;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .application__file-progress-percent {
-  color: var(--clr-pink);
+  color: #E7EAEE;
 }
 
 .application__file-progress-indicator {
@@ -8813,6 +8832,7 @@ a.btn {
 }
 
 .application__file-progress-indicator div {
+  width: 0%;
   height: 100%;
   border-radius: 4px;
   background-color: var(--clr-pink);
