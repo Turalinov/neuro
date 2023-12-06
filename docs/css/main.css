@@ -497,21 +497,25 @@ button {
   margin: 0 auto;
   height: 100%;
   max-width: 1720px;
+  border: 1px solid red;
   z-index: 1;
 }
 @media screen and (max-width: 1820px) {
   .container {
     margin: 0px 50px;
+    border: 1px solid blue;
   }
 }
 @media screen and (max-width: 992px) {
   .container {
     margin: 0px 30px;
+    border: 1px solid green;
   }
 }
 @media screen and (max-width: 768px) {
   .container {
     margin: 0px 20px;
+    border: 1px solid orange;
   }
 }
 
@@ -8329,10 +8333,31 @@ a.btn {
   background-size: cover;
   padding: 145px 0 20px;
 }
+@media screen and (max-width: 768px) {
+  .application {
+    background-image: initial;
+    background-position: initial;
+    background-repeat: initial;
+    padding: 126px 0 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .application__container {
+    margin: 0px;
+  }
+}
 
 .application__title {
   text-align: center;
   margin-bottom: 52px;
+}
+@media screen and (max-width: 768px) {
+  .application__title {
+    font-size: 34px;
+    text-align: left;
+    margin-bottom: 32px;
+  }
 }
 
 .application-wrap {
@@ -8345,6 +8370,11 @@ a.btn {
   max-width: 514px;
   margin: 0 auto;
 }
+@media screen and (max-width: 768px) {
+  .application__steps-wrap {
+    max-width: 320px;
+  }
+}
 
 .application__steps {
   border-radius: 44px 44px 0px 0px;
@@ -8354,6 +8384,12 @@ a.btn {
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  .application__steps {
+    border-radius: 26px 26px 0px 0px;
+    padding: 18px 24px;
+  }
+}
 
 .application__step {
   font-size: 14px;
@@ -8361,6 +8397,11 @@ a.btn {
   line-height: normal;
   display: flex;
   align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .application__step {
+    font-size: 12px;
+  }
 }
 
 .application__dot {
@@ -8373,6 +8414,14 @@ a.btn {
   position: relative;
   background: var(--clr-blue);
   z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  .application__dot {
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    line-height: 1.3;
+  }
 }
 .application__dot span {
   position: relative;
@@ -8408,6 +8457,11 @@ a.btn {
 .application__step > span {
   margin-left: 10px;
 }
+@media screen and (max-width: 768px) {
+  .application__step > span {
+    margin-left: 3px;
+  }
+}
 
 .application__step.active {
   font-weight: 700;
@@ -8427,6 +8481,13 @@ a.btn {
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media screen and (max-width: 768px) {
+  .application__arrow {
+    width: 5px;
+    height: 8px;
+    background-image: url("../img/application__step-arrow@mobile.svg");
+  }
+}
 
 .application__content {
   display: none;
@@ -8441,6 +8502,12 @@ a.btn {
   border-radius: 0px 0px 44px 44px;
   background: #FFF;
 }
+@media screen and (max-width: 768px) {
+  .application__content-inner {
+    padding: 20px;
+    border-radius: 0px;
+  }
+}
 
 .application__section + .application__section {
   margin-top: 20px;
@@ -8451,6 +8518,13 @@ a.btn {
   justify-content: space-between;
   margin-left: -20px;
 }
+@media screen and (max-width: 768px) {
+  .application__row {
+    flex-direction: column;
+    justify-content: initial;
+    margin-left: 0px;
+  }
+}
 
 .application__row + .application__row {
   margin-top: 20px;
@@ -8460,9 +8534,26 @@ a.btn {
   width: calc(50% - 20px);
   margin-left: 20px;
 }
+@media screen and (max-width: 768px) {
+  .application__block {
+    width: 100%;
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .application__block + .application__block {
+    margin-top: 20px;
+  }
+}
 
 .application__block--full {
   width: calc(100% - 20px);
+}
+@media screen and (max-width: 768px) {
+  .application__block--full {
+    width: 100%;
+  }
 }
 
 .application__label span {
@@ -8473,9 +8564,14 @@ a.btn {
   font-size: 14px;
   font-weight: 600;
 }
+@media screen and (max-width: 768px) {
+  .application__label-text {
+    margin-bottom: 4px;
+  }
+}
 
 .application-input {
-  font-size: 16px;
+  font-size: 14px;
   padding: 8px;
   width: 100%;
   border-radius: 4px;
@@ -8492,12 +8588,18 @@ a.btn {
   font-size: 14px;
   font-weight: 600;
 }
+@media screen and (max-width: 768px) {
+  .application__custom-radio-label {
+    margin-bottom: 4px;
+  }
+}
 .application__custom-radio-label span {
   color: #FF00A7;
 }
 
 .application__custom-radio-wrap {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .application__custom-radio {
@@ -8515,8 +8617,17 @@ a.btn {
   font-size: 14px;
   font-weight: 500;
   display: inline-block;
-  padding: 10px 16px;
+  padding: 10px 15px;
   border: 1px solid #D0D5DD;
+}
+@media screen and (max-width: 768px) {
+  .application__custom-radio input[type=radio] ~ span {
+    padding: 12px 16px;
+  }
+}
+
+.application__content:nth-child(2) .application__custom-radio input[type=radio] ~ span {
+  padding: 16px 28px;
 }
 
 .application__custom-radio input[type=radio]:checked ~ span {
@@ -8524,12 +8635,7 @@ a.btn {
 }
 
 .application__link {
-  margin-top: 20px;
   background: transparent;
-  border: 0;
-}
-
-.application__link {
   text-decoration: none;
   width: 100%;
   height: 56px;
@@ -8622,6 +8728,11 @@ a.btn {
   background-position: center;
   transition: all 0.5s;
 }
+@media screen and (max-width: 768px) {
+  .application__link span::after {
+    background-image: url("../img/application__step-arrow@mobile.svg");
+  }
+}
 .application__link span::before {
   content: "";
   position: absolute;
@@ -8636,9 +8747,60 @@ a.btn {
   background-position: center;
   transition: all 0.5s;
 }
+@media screen and (max-width: 768px) {
+  .application__link span::before {
+    background-image: url("../img/application__step-arrow@mobile.svg");
+  }
+}
+
+.application__link--full,
+.application__content-btns {
+  margin-top: 20px;
+}
+@media screen and (max-width: 768px) {
+  .application__link--full,
+  .application__content-btns {
+    margin: 20px auto 0;
+    max-width: 90%;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .application__link--full span::after {
+    background-image: url("../img/application__link-arrow.svg");
+  }
+}
+@media screen and (max-width: 768px) {
+  .application__link--full span::before {
+    background-image: url("../img/application__link-arrow.svg");
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .application__link:not(.application__link--full) {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .application__link:not(.application__link--full) > span {
+    padding-right: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .application__link.application__link--main > span {
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .application__link.application__link--main > span::after, .application__link.application__link--main > span::before {
+    display: none;
+  }
+}
 
 .application__content-error {
-  font-size: 15px;
+  font-size: 14px;
   color: #ff2a2a;
   opacity: 0;
   visibility: hidden;
@@ -8659,6 +8821,12 @@ a.btn {
 
 .application__content-btns-left {
   width: 232px;
+}
+@media screen and (max-width: 768px) {
+  .application__content-btns-left {
+    max-width: 155px;
+    width: 100%;
+  }
 }
 
 .application__link-prev {
@@ -8682,6 +8850,11 @@ a.btn {
   position: relative;
   background-color: var(--clr-blue);
 }
+@media screen and (max-width: 768px) {
+  .application__link-prev {
+    font-size: 14px;
+  }
+}
 .application__link-prev:hover {
   background-color: #25205b;
 }
@@ -8689,6 +8862,12 @@ a.btn {
   transition: all 0.5s;
   padding-left: 27px;
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  .application__link-prev span {
+    font-size: 14px;
+    padding-left: 12px;
+  }
 }
 .application__link-prev span::after {
   content: "";
@@ -8704,9 +8883,22 @@ a.btn {
   background-position: center;
   transition: all 0.5s;
 }
+@media screen and (max-width: 768px) {
+  .application__link-prev span::after {
+    width: 5px;
+    height: 8px;
+    background-image: url("../img/application__step-arrow@mobile.svg");
+  }
+}
 
 .application__content-btns-right {
   width: 232px;
+}
+@media screen and (max-width: 768px) {
+  .application__content-btns-right {
+    max-width: 155px;
+    width: 100%;
+  }
 }
 
 .application__file,
@@ -8717,6 +8909,14 @@ a.btn {
   width: 100%;
   height: 100%;
   color: var(--clr-blue);
+}
+@media screen and (max-width: 768px) {
+  .application__file,
+  .application__file--comment {
+    background-color: initial;
+    border-radius: initial;
+    padding: 0;
+  }
 }
 
 .application__file-label {
@@ -8954,6 +9154,76 @@ a.btn {
   width: 100%;
   border-radius: initial;
   border: initial;
+}
+
+.application__status {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 118px 0 47px;
+  max-width: 1140px;
+  margin: 0 auto;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .application__status {
+    padding: 122px 0 30px;
+  }
+}
+.application__status::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 78px;
+  height: 78px;
+  background-image: url(../img/done.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 768px) {
+  .application__status::after {
+    width: 72px;
+    height: 72px;
+  }
+}
+
+.application__status--error::after {
+  background-image: url(../img/failure.svg);
+}
+.application__status--error .application__status-link {
+  width: 100%;
+  max-width: 263px;
+  margin-top: 0;
+}
+.application__status--error .application__status-link span {
+  padding-left: 23px;
+  padding-right: 0;
+}
+.application__status--error .application__status-link span::after, .application__status--error .application__status-link span::before {
+  width: 13px;
+  height: 7px;
+  background-image: url(../img/application__link-arrow.svg);
+  left: 0;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.application__status-title {
+  font-family: "Epiloque", sans-serif;
+  font-weight: 600;
+  color: var(--clr-white);
+  font-size: 37px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .application__status-title {
+    font-size: 34px;
+    margin-bottom: 50px;
+  }
 }
 
 .pagination {
