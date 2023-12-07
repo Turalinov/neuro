@@ -108,7 +108,7 @@
 
 
       <!-- apply -->
-      <a href="#" class="header__icon-btn">
+      <a href="online-application.html" class="header__icon-btn">
         <span>Apply now</span>
       </a>
       <!-- apply end -->
@@ -118,7 +118,7 @@
 
     <div class="header__top">
       <!-- apply -->
-      <a href="#" class="header__icon-btn">
+      <a href="online-application.html" class="header__icon-btn">
         <span>Apply now</span>
       </a>
       <!-- apply end -->
@@ -280,7 +280,7 @@
 
       <!-- кнопки -->
       <div class="master__buttons">
-        <a href="#" class="master__button master__button--icon">
+        <a href="online-application.html" class="master__button master__button--icon">
           <span>Apply now</span>
         </a>
         <a href="#" class="master__button master__button--bordered">
@@ -755,7 +755,8 @@
             </ul>
           </div>
 
-          <a href="#" class="career__info-link" target="_blank"><span>Contact our school representative</span></a>
+          <a href="contact.html" class="career__info-link"><span>Contact our school
+              representative</span></a>
         </div>
       </div>
     </div>
@@ -1728,10 +1729,14 @@
 
           <form action="#" class="footer__subscription-form">
             <div class="footer__subscription-form-wrapper">
-              <input type="email" class="footer__subscription-form-email" placeholder="Email addess">
-
+              <input type="hidden" name="formtype" value="subscribe">
+              <input type="text" name="email" class="footer__subscription-form-email js-required"
+                placeholder="Email addess">
               <button class="footer__subscription-form-btn">Send</button>
+            </div>
 
+            <div class="footer__subscription-form-error">
+              The <span>Email</span> field is not filled in or filled in incorrectly
             </div>
           </form>
         </div>

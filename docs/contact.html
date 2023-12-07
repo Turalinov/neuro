@@ -107,7 +107,7 @@
 
 
       <!-- apply -->
-      <a href="#" class="header__icon-btn">
+      <a href="online-application.html" class="header__icon-btn">
         <span>Apply now</span>
       </a>
       <!-- apply end -->
@@ -117,7 +117,7 @@
 
     <div class="header__top">
       <!-- apply -->
-      <a href="#" class="header__icon-btn">
+      <a href="online-application.html" class="header__icon-btn">
         <span>Apply now</span>
       </a>
       <!-- apply end -->
@@ -247,13 +247,11 @@
     <h1 class="contact__title">
       Contact us
     </h1>
-
-
   </div>
 </section>
         <section class="contacts">
   <div class="container">
-    <div class="contacts__wrap" style="">
+    <div class="contacts__wrap active">
 
 
       <div class="contacts__address-wrap">
@@ -343,7 +341,8 @@
                     <div class="form__label">
                       First Name <span>*</span>
                     </div>
-                    <input type="text" class="form__input" name="firstname" autocomplete="off">
+                    <input type="hidden" name="formtype" value="contacts">
+                    <input type="text" class="form__input js-required" name="firstname" autocomplete="off">
                   </label>
                 </div>
 
@@ -353,7 +352,7 @@
                     <div class="form__label">
                       Last Name <span>*</span>
                     </div>
-                    <input type="text" class="form__input" name="lastname" autocomplete="off">
+                    <input type="text" class="form__input js-required" name="lastname" autocomplete="off">
                   </label>
                 </div>
 
@@ -363,7 +362,7 @@
                     <div class="form__label">
                       Email <span>*</span>
                     </div>
-                    <input type="text" class="form__input" name="email" autocomplete="off">
+                    <input type="text" class="form__input js-required" name="email" autocomplete="off">
                   </label>
                 </div>
 
@@ -372,8 +371,34 @@
                     <div class="form__label">
                       Telephone <span>*</span>
                     </div>
-                    <input type="text" class="form__input" placeholder="+34 (___) ___-____" name="email"
-                      autocomplete="off">
+                    <div class="custom-phone-select">
+
+                      <div class="custom_phone-select-wrap-parent">
+                        <!-- обертка для выбранной страны и иконки  -->
+                        <div class="custom_phone-select-wrap">
+                          <!-- выбранная страна  -->
+                          <div class="custom_phone-select-value">
+                            ES
+                          </div>
+                          <!-- иконка -->
+                          <div class="custom_phone-select-icon"></div>
+
+
+                        </div>
+                        <div class="custom_phone-select-list-wrap">
+                          <div class="custom_phone-select-list">
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- placeholder="+34 (___) ___-____" -->
+                      <input type="text" class=" form__input js-phone js-required" name="telephone">
+
+
+                    </div>
+
+
+
                   </label>
                 </div>
 
@@ -384,6 +409,12 @@
                     </div>
                     <textarea class="form__input form__input--textarea" name="message"></textarea>
                   </label>
+                </div>
+
+                <div class="form__row">
+                  <div class="form__error">
+                    The <span></span> field is not filled in or filled in incorrectly
+                  </div>
                 </div>
 
 
@@ -414,7 +445,7 @@
 
     </div>
 
-    <div class=" contacts__thanks">
+    <div class=" contacts__thanks hide">
                   <h1> Thank you<br>Your message was successfully sent
                   </h1>
 
@@ -545,10 +576,14 @@
 
           <form action="#" class="footer__subscription-form">
             <div class="footer__subscription-form-wrapper">
-              <input type="email" class="footer__subscription-form-email" placeholder="Email addess">
-
+              <input type="hidden" name="formtype" value="subscribe">
+              <input type="text" name="email" class="footer__subscription-form-email js-required"
+                placeholder="Email addess">
               <button class="footer__subscription-form-btn">Send</button>
+            </div>
 
+            <div class="footer__subscription-form-error">
+              The <span>Email</span> field is not filled in or filled in incorrectly
             </div>
           </form>
         </div>

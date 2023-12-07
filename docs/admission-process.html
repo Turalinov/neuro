@@ -110,7 +110,7 @@
 
 
       <!-- apply -->
-      <a href="#" class="header__icon-btn">
+      <a href="online-application.html" class="header__icon-btn">
         <span>Apply now</span>
       </a>
       <!-- apply end -->
@@ -120,7 +120,7 @@
 
     <div class="header__top">
       <!-- apply -->
-      <a href="#" class="header__icon-btn">
+      <a href="online-application.html" class="header__icon-btn">
         <span>Apply now</span>
       </a>
       <!-- apply end -->
@@ -259,7 +259,7 @@
         capabilities of the brain and its functioning.
       </div>
 
-      <a href="#" class="process__btn"><span>Apply now</span></a>
+      <a href="online-application.html" class="process__btn"><span>Apply now</span></a>
     </div>
     <!-- right  -->
     <div class="process__right">
@@ -298,7 +298,15 @@
               <li>CV (in English)</li>
               <li>Latest Academic Transcript</li>
               <li>Motivation Letter
-                <span class="js-toolkit">?</span>
+                <span class="wind-toolkit-btn">
+                  ?
+                  <div class="wind-tooltip">
+                    1. Локация тщательно отбиралась учёными
+                    ЦИОТ “СФЕРА” на отсутствие геопатогенных зон.<br>
+                    2. Мы находимся вдали от техногенных зон.<br>
+                    3. ЦИОТ “СФЕРА” находится в экологически благоприятной зоне.&nbsp;
+                  </div>
+                </span>
               </li>
             </ul>
           </div>
@@ -345,7 +353,7 @@
             payment in
             installments. Both
             options can be completed through bank transfer.</div>
-          <a href="#" class="stages__link">
+          <a href="online-application.html" class="stages__link">
             <div>
 
             </div>
@@ -368,7 +376,7 @@
         <div class="touch__desc">
           if you still have questions, please contact us
         </div>
-        <a href="#" class="touch__link">Contact Us</a>
+        <a href="contact.html" class="touch__link">Contact Us</a>
       </div>
 
       <div class="touch__right">
@@ -495,10 +503,14 @@
 
           <form action="#" class="footer__subscription-form">
             <div class="footer__subscription-form-wrapper">
-              <input type="email" class="footer__subscription-form-email" placeholder="Email addess">
-
+              <input type="hidden" name="formtype" value="subscribe">
+              <input type="text" name="email" class="footer__subscription-form-email js-required"
+                placeholder="Email addess">
               <button class="footer__subscription-form-btn">Send</button>
+            </div>
 
+            <div class="footer__subscription-form-error">
+              The <span>Email</span> field is not filled in or filled in incorrectly
             </div>
           </form>
         </div>

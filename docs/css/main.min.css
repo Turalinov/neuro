@@ -1545,6 +1545,33 @@ button {
     right: 25px;
   }
 }
+.stages__item:nth-child(1) .stages__docs ul > li:last-child span .wind-tooltip {
+  font-weight: 400;
+  position: absolute;
+  bottom: 30px;
+  left: -50px;
+  z-index: 5;
+  padding: 20px;
+  width: 250px;
+  border-radius: 5px;
+  background-color: #685bd2;
+  color: var(--clr-white);
+  font-size: 14px;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+}
+@media screen and (max-width: 768px) {
+  .stages__item:nth-child(1) .stages__docs ul > li:last-child span .wind-tooltip {
+    left: initial;
+    right: -25px;
+  }
+}
+.stages__item:nth-child(1) .stages__docs ul > li:last-child span .wind-tooltip.open {
+  opacity: 1;
+  visibility: visible;
+}
 .stages__item:nth-child(1) .stages__docs ul > li + li {
   margin-top: 5px;
 }
@@ -2597,6 +2624,20 @@ a.btn {
   width: calc(100% + 2px);
   max-width: 265px;
 }
+.contacts__wrap.active {
+  display: block;
+}
+.contacts__wrap.hide {
+  display: none;
+}
+
+.contacts__thanks.active {
+  display: flex;
+}
+.contacts__thanks.hide {
+  display: none;
+}
+
 .custom-phone-select {
   font-size: 16px;
   padding: 8px;
@@ -3404,7 +3445,19 @@ a.btn {
   max-width: 308px;
   border-radius: 13px 0px 13px 13px;
   border: 1px solid var(--clr-white);
-  margin-bottom: 32px;
+  margin-bottom: 10px;
+}
+
+.footer__subscription-form-error {
+  font-size: 14px;
+  color: #ff2a2a;
+  opacity: 0;
+  visibility: hidden;
+  margin-bottom: 20px;
+}
+.footer__subscription-form-error.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .footer__subscription-form-email {
@@ -3512,6 +3565,20 @@ a.btn {
   width: calc(100% + 2px);
   max-width: 473px;
 }
+.form__error {
+  font-size: 14px;
+  color: #ff2a2a;
+  opacity: 0;
+  visibility: hidden;
+}
+.form__error.active {
+  opacity: 1;
+  visibility: visible;
+}
+.form__error span {
+  font-weight: 500;
+}
+
 .header {
   position: fixed;
   left: 0;
@@ -8365,6 +8432,9 @@ a.btn {
   margin: 0 auto;
   color: var(--clr-blue-dark);
 }
+.application-wrap.hide {
+  display: none;
+}
 
 .application__steps-wrap {
   max-width: 514px;
@@ -9226,6 +9296,15 @@ a.btn {
   }
 }
 
+.application__status--success.hide,
+.application__status--error.hide {
+  display: none;
+}
+.application__status--success.active,
+.application__status--error.active {
+  display: flex;
+}
+
 .pagination {
   border-top: 1px solid #EAECF0;
   padding-top: 28px;
@@ -9734,6 +9813,43 @@ a.btn {
   top: 8px;
   width: 100%;
   transform: rotate(-30deg);
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
 
 .touch {

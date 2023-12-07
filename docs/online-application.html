@@ -110,7 +110,7 @@
 
 
       <!-- apply -->
-      <a href="#" class="header__icon-btn">
+      <a href="online-application.html" class="header__icon-btn">
         <span>Apply now</span>
       </a>
       <!-- apply end -->
@@ -120,7 +120,7 @@
 
     <div class="header__top">
       <!-- apply -->
-      <a href="#" class="header__icon-btn">
+      <a href="online-application.html" class="header__icon-btn">
         <span>Apply now</span>
       </a>
       <!-- apply end -->
@@ -311,6 +311,7 @@
                     <div class="application__label-text">
                       First Name <span>*</span>
                     </div>
+                    <input type="hidden" name="formtype" value="application">
                     <input type="text" class="application-input js-required" name="firstname">
                   </label>
                 </div>
@@ -1208,7 +1209,7 @@
 
   <div class="container">
 
-    <div class="application__status application__status--success">
+    <div class="application__status application__status--success hide">
       <div class="application__status-title">
         Your payment is well received <br>
         Our manager wil contact you soon.
@@ -1223,7 +1224,7 @@
       </a>
     </div>
 
-    <div class="application__status application__status--error">
+    <div class="application__status application__status--error hide">
       <div class="application__status-title">
         There was some error during the payment <br> please repeat the operation or contact our team
       </div>
@@ -1360,10 +1361,14 @@
 
           <form action="#" class="footer__subscription-form">
             <div class="footer__subscription-form-wrapper">
-              <input type="email" class="footer__subscription-form-email" placeholder="Email addess">
-
+              <input type="hidden" name="formtype" value="subscribe">
+              <input type="text" name="email" class="footer__subscription-form-email js-required"
+                placeholder="Email addess">
               <button class="footer__subscription-form-btn">Send</button>
+            </div>
 
+            <div class="footer__subscription-form-error">
+              The <span>Email</span> field is not filled in or filled in incorrectly
             </div>
           </form>
         </div>
