@@ -7004,6 +7004,7 @@ a.btn {
 }
 @media screen and (max-width: 768px) {
   .master__title {
+    letter-spacing: initial;
     margin-bottom: 62px;
     font-size: 34px;
   }
