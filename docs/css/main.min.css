@@ -1060,13 +1060,13 @@ button {
 
 .accordion__item {
   border: 1px solid #FF00A7;
-  padding: 46px 60px;
+  padding: 46px 60px 40px 60px;
   border-radius: 20px;
 }
 @media screen and (max-width: 768px) {
   .accordion__item {
     padding: 32px 13px 16px 16px;
-    background-repeat: 3px;
+    border-radius: 3px;
   }
 }
 
@@ -1090,6 +1090,15 @@ button {
     flex-direction: column;
   }
 }
+.open .accordion__title::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+@media screen and (max-width: 768px) {
+  .open .accordion__title::after {
+    transform: rotate(180deg);
+  }
+}
+
 .accordion__title {
   font-family: "Gilroy", sans-serif;
   font-weight: 600;
@@ -1097,6 +1106,32 @@ button {
   color: var(--clr-blue);
   text-align: left;
   max-width: 88%;
+  padding-left: 64px;
+  position: relative;
+}
+.accordion__title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 24px;
+  height: 13px;
+  transition: all 0.5s;
+  background-image: url("../img/accordion-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 768px) {
+  .accordion__title::after {
+    top: -14px;
+    transform: none;
+    width: 5px;
+    height: 3px;
+    background-size: contain;
+    background-image: url("../img/accordion-icon-mob.svg");
+  }
 }
 .accordion__title span {
   margin-right: 20px;
@@ -1124,6 +1159,7 @@ button {
 }
 @media screen and (max-width: 768px) {
   .accordion__title {
+    padding-left: 0;
     font-size: 18px;
   }
 }
@@ -2260,8 +2296,7 @@ a.btn {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(#eee, #222);
-  border: 1px solid black;
+  z-index: 1;
 }
 
 .help {
@@ -4359,6 +4394,7 @@ a.btn {
 
 .hero__left {
   margin-left: 188px;
+  z-index: 2;
 }
 @media screen and (max-width: 1500px) {
   .hero__left {
@@ -4407,6 +4443,7 @@ a.btn {
   display: flex;
   flex-direction: column;
   flex-basis: 772px;
+  z-index: 2;
 }
 @media screen and (max-width: 1200px) {
   .hero__right {
