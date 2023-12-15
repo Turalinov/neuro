@@ -503,6 +503,11 @@ button {
     margin: 0px 50px;
   }
 }
+@media screen and (max-width: 1600px) {
+  .container {
+    margin: 0 100px;
+  }
+}
 @media screen and (max-width: 992px) {
   .container {
     margin: 0px 30px;
@@ -2290,13 +2295,36 @@ a.btn {
   opacity: 0;
 }
 
-#canvas {
+.canvas-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+}
+
+#canvas,
+#canvas-header {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  #canvas,
+  #canvas-header {
+    width: 100%;
+  }
+}
+
+.canvas-wrap-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .help {
@@ -3640,6 +3668,11 @@ a.btn {
   }
 }
 
+.footer__link:last-child() > a {
+  display: flex;
+  align-items: center;
+}
+
 .footer__copy.footer__copy--additional {
   display: none;
 }
@@ -3733,12 +3766,22 @@ a.btn {
   padding: 25px 0 25px;
   z-index: 500;
 }
+@media screen and (max-width: 1600px) {
+  .header {
+    padding: 17px 0 17px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .header {
+    padding: 23px 0 23px;
+  }
+}
 @media screen and (max-width: 992px) {
   .header {
     padding: 20px 0 20px;
   }
 }
-.header::after {
+.header .header-after {
   content: "";
   position: absolute;
   top: 0;
@@ -3755,8 +3798,8 @@ a.btn {
   background-size: cover;
 }
 
-.header.header--bg::after,
-.header.active::after {
+.header.header--bg .header-after,
+.header.active .header-after {
   visibility: visible;
   opacity: 1;
 }
@@ -3796,9 +3839,29 @@ a.btn {
 .header__logo {
   margin-right: 74px;
 }
-@media screen and (max-width: 1456px) {
+@media screen and (max-width: 1600px) {
   .header__logo {
-    margin-right: 44px;
+    margin-right: 143px;
+  }
+}
+@media screen and (max-width: 1536px) {
+  .header__logo {
+    margin-right: 90px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .header__logo {
+    margin-right: 70px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .header__logo {
+    margin-right: 40px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .header__logo {
+    margin-right: 28px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -3832,9 +3895,14 @@ a.btn {
   margin-left: 43px;
   overflow: hidden;
 }
-@media screen and (max-width: 1320px) {
+@media screen and (max-width: 1600px) {
   .header__icon-btn {
-    margin-left: 25px;
+    margin-left: 117px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .header__icon-btn {
+    margin-left: 65px;
   }
 }
 @media screen and (max-width: 1216px) {
@@ -3941,6 +4009,16 @@ a.btn {
   font-size: 18px;
   color: var(--clr-white);
 }
+@media screen and (max-width: 1600px) {
+  .header__btns {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .header__btns {
+    font-size: 12px;
+  }
+}
 @media screen and (max-width: 992px) {
   .header__btns {
     max-width: 270px;
@@ -3966,6 +4044,11 @@ a.btn {
   transition: all 0.5s;
   position: relative;
 }
+@media screen and (max-width: 1024px) {
+  .header__btn {
+    margin-right: 4px;
+  }
+}
 .header__btn::after {
   content: "";
   position: absolute;
@@ -3986,17 +4069,6 @@ a.btn {
 .header__btn:hover::after {
   opacity: 1;
 }
-@media screen and (max-width: 1320px) {
-  .header__btn {
-    margin-right: 14px;
-  }
-}
-@media screen and (max-width: 1082px) {
-  .header__btn {
-    display: none;
-  }
-}
-
 .header__link {
   position: relative;
 }
@@ -6607,10 +6679,22 @@ a.btn {
   width: 202px;
   height: 53px;
 }
-@media screen and (max-width: 1320px) {
+@media screen and (max-width: 1600px) {
   .logo {
-    width: 182px;
-    height: 47px;
+    width: 181px;
+    height: 42.75px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .logo {
+    width: 146px;
+    height: 39px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .logo {
+    width: 112px;
+    height: 30px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -6919,9 +7003,19 @@ a.btn {
   padding: 116px 0 88px;
   position: relative;
 }
-@media screen and (max-width: 1253px) {
+@media screen and (max-width: 1600px) {
   .master {
-    padding: 116px 0 200px;
+    padding: 165px 0 121px;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .master {
+    padding: 95px 0 60px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .master {
+    padding: 113px 0 60px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -6949,12 +7043,7 @@ a.btn {
   margin-left: 117px;
   flex: 1 1 774px;
 }
-@media screen and (max-width: 1417px) {
-  .master__left {
-    margin-left: 50px;
-  }
-}
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1600px) {
   .master__left {
     margin-left: 0;
   }
@@ -6973,35 +7062,49 @@ a.btn {
   flex-direction: column;
   position: absolute;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  width: 863px;
 }
-@media screen and (max-width: 1627px) {
+@media screen and (max-width: 1600px) {
   .master__right {
-    width: 750px;
+    width: 825px;
+    height: 570px;
   }
 }
-@media screen and (max-width: 1493px) {
+@media screen and (max-width: 1536px) {
   .master__right {
-    width: 650px;
+    width: 762px;
+    height: 570px;
   }
 }
-@media screen and (max-width: 1272px) {
+@media screen and (max-width: 1440px) {
   .master__right {
-    width: 550px;
+    width: 666px;
+    height: 571px;
   }
 }
-@media screen and (max-width: 1113px) {
+@media screen and (max-width: 1366px) {
   .master__right {
-    width: 450px;
+    width: 592px;
+    height: 620px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .master__right {
+    width: 507px;
+    height: 620px;
+  }
+}
+@media screen and (max-width: 1187px) {
+  .master__right {
+    width: 342px;
+    height: 422px;
   }
 }
 @media screen and (max-width: 992px) {
   .master__right {
+    height: initial;
     width: initial;
     position: relative;
-    top: initial;
-    transform: initial;
     margin-left: 0;
     max-width: 100%;
     flex: initial;
@@ -7021,22 +7124,26 @@ a.btn {
 }
 @media screen and (max-width: 1600px) {
   .master__title {
-    font-size: 70px;
+    margin-top: 0;
+    font-size: 63px;
+    letter-spacing: -3px;
   }
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1366px) {
   .master__title {
-    font-size: 60px;
+    margin-top: 70px;
   }
 }
-@media screen and (max-width: 1253px) {
+@media screen and (max-width: 1280px) {
   .master__title {
-    margin-top: 60px;
+    margin-top: 50px;
+    letter-spacing: -2px;
   }
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1024px) {
   .master__title {
-    font-size: 56px;
+    margin-bottom: 61px;
+    font-size: 53px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -7057,6 +7164,18 @@ a.btn {
   flex-direction: column;
   max-width: 495px;
 }
+@media screen and (max-width: 1600px) {
+  .master__bullets {
+    margin-bottom: 45px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .master__bullets {
+    border-radius: 27px;
+    max-width: 392px;
+    padding: 20px;
+  }
+}
 @media screen and (max-width: 992px) {
   .master__bullets {
     max-width: 100%;
@@ -7072,6 +7191,11 @@ a.btn {
 
 .master__bullet + .master__bullet {
   margin-top: 20px;
+}
+@media screen and (max-width: 1024px) {
+  .master__bullet + .master__bullet {
+    margin-top: 10px;
+  }
 }
 @media screen and (max-width: 768px) {
   .master__bullet + .master__bullet {
@@ -7099,6 +7223,11 @@ a.btn {
   font-size: 18px;
   white-space: nowrap;
 }
+@media screen and (max-width: 1024px) {
+  .master__bullet span {
+    font-size: 16px;
+  }
+}
 @media screen and (max-width: 768px) {
   .master__bullet span {
     font-size: 12px;
@@ -7125,13 +7254,23 @@ a.btn {
   transform: translateX(-50%);
   z-index: 2;
 }
-@media screen and (max-width: 1253px) {
+@media screen and (max-width: 1600px) {
   .master__buttons {
-    bottom: -155px;
+    position: static;
+    max-width: 480px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    left: initial;
+    bottom: initial;
+    transform: initial;
+    z-index: 2;
   }
 }
 @media screen and (max-width: 992px) {
   .master__buttons {
+    max-width: initial;
+    flex-direction: column;
     position: static;
     margin: 0 auto;
     left: initial;
@@ -7146,8 +7285,32 @@ a.btn {
   border-radius: 34px;
   text-align: center;
 }
+@media screen and (max-width: 1600px) {
+  .master__button {
+    max-width: 233px;
+    width: 100%;
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .master__button {
+    max-width: initial;
+    padding: 23px;
+  }
+}
+
 .master__button + .master__button {
   margin-top: 20px;
+}
+@media screen and (max-width: 1600px) {
+  .master__button + .master__button {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 992px) {
+  .master__button + .master__button {
+    margin-top: 20px;
+  }
 }
 
 .master__button--bordered {
@@ -7171,6 +7334,11 @@ a.btn {
   position: relative;
   z-index: 3;
   overflow: hidden;
+}
+@media screen and (max-width: 1600px) {
+  .master__button--icon {
+    padding: 20px;
+  }
 }
 .master__button--icon:hover span {
   background: none;
@@ -7226,6 +7394,7 @@ a.btn {
 .master__img {
   overflow: hidden;
   border-radius: 500px;
+  height: 100%;
 }
 .master__img-elem {
   width: 100%;
@@ -7250,7 +7419,32 @@ a.btn {
   background-repeat: no-repeat;
   background-size: 81px 69px;
 }
-@media screen and (max-width: 1510px) {
+@media screen and (max-width: 1600px) {
+  .master__icon {
+    bottom: initial;
+    top: 0px;
+    right: 0px;
+    margin-top: 0;
+    width: 117px;
+    height: 117px;
+    border-radius: 35px;
+    background-size: 66px 56px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .master__icon {
+    top: -20px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .master__icon {
+    width: 67px;
+    height: 67px;
+    border-radius: 20px;
+    background-size: 37px 32px;
+  }
+}
+@media screen and (max-width: 768px) {
   .master__icon {
     display: none;
   }
@@ -7953,6 +8147,16 @@ a.btn {
   padding-right: 16px;
   text-decoration: none;
 }
+@media screen and (max-width: 1600px) {
+  .menu > ul > li > a {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .menu > ul > li > a {
+    font-size: 14px;
+  }
+}
 @media screen and (max-width: 992px) {
   .menu > ul > li > a {
     font-size: 24px;
@@ -7962,14 +8166,29 @@ a.btn {
 .menu > ul > li + li {
   margin-left: 75px;
 }
-@media screen and (max-width: 1456px) {
+@media screen and (max-width: 1600px) {
   .menu > ul > li + li {
-    margin-left: 35px;
+    margin-left: 41px;
   }
 }
-@media screen and (max-width: 1320px) {
+@media screen and (max-width: 1440px) {
+  .menu > ul > li + li {
+    margin-left: 42px;
+  }
+}
+@media screen and (max-width: 1366px) {
   .menu > ul > li + li {
     margin-left: 25px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .menu > ul > li + li {
+    margin-left: 41px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .menu > ul > li + li {
+    margin-left: 16px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -10192,9 +10411,19 @@ a.btn {
   margin-right: 32px;
   z-index: 50;
 }
-@media screen and (max-width: 1320px) {
+@media screen and (max-width: 1440px) {
   .switcher {
-    margin-right: 22px;
+    margin-right: 18px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .switcher {
+    margin-right: 12px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .switcher {
+    margin-right: 2px;
   }
 }
 @media screen and (max-width: 992px) {
